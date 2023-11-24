@@ -18,10 +18,13 @@ footer{
     background-color: var(--dark-color);
 }
 
-h1,h2,h3,h4,h5,h6{
+h1{
     color:var(--primary-color)
 }
 
+h2,h3,h4,h5,h6{
+    color: var(--dark-color);
+}
 footer{
     padding-right: 1rem;
 }

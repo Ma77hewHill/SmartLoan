@@ -1,4 +1,5 @@
-//Call Hello World 
-function HelloWorld(){
-    alert("Hello World");
-}
+//Declare variables 
+let loanAmount = document.getElementById("loanAmount");
+let loanDuration = document.getElementById("loanDuration");
+let interestRate = document.getElementById("interestRate");
+

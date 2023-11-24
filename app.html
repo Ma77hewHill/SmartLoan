@@ -20,7 +20,7 @@
 <!--NAV SECTION-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/img/Smart Loan  Fav.png" class="d-inline-block align-text-top" width="30" height="24"><img>  Smart Loan</a>
+        <a class="navbar-brand" href="#"><img src="/img/CalculatorLogo.png" class="d-inline-block align-text-top rounded-circle" width="30" height="30"><img>  Smart Loan</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,25 +49,43 @@
 <!--MAIN SECTION-->
 <main class="flex-shrink-0">
     <div class="container">
-        <h1 class="text-center">Smart Loan</h1>
+        <h1 class="text-center">Smart Loan<span></span>   <img width="55" height="50" src="/img/CalculatorLogo.png" alt=""></h1>
+        
+        <h2 class="text-center m-5">Know the cost of the loan <i><strong>before</strong></i> you take it out!</h2>
         <div class="row">
-            <div class="d-flex justify-content-center">
+            <div class="col m-5">
+                <img src="/img/Think.png" alt="">
+            </div>
+            <div class="col m-5 p-5">
                 <form class="mx-5">
                     <div class="form-group mx-5">
-                        <label for="">How much will you borrow?</label>
-                        <input class="form-control" type="number" placeholder="Loan Amount">
+                        <label class="m-2">How much will you borrow?</label>
+                        <input id="loanAmount" class="form-control" type="number" placeholder="Loan Amount">
                     </div>
                     <div class="form-group mx-5">
-                        <label for="">How long will you borrow it for?</label>
-                        <input class="form-control" type="number" placeholder="Loan Duration">
+                        <label class="m-2">How long will you borrow it for?</label>
+                        <input id="loanDuration" class="form-control" type="number" placeholder="Loan Duration">
                     </div>
                     <div class="form-group mx-5">
-                        <label for="">What is the interest rate on the loan?</label>
-                        <input class="form-control" type="number" placeholder="Interest Rate">
+                        <label class="m-2">What is the interest rate on the loan?</label>
+                        <input id="interestRate" class="form-control" type="number" placeholder="Interest Rate">
                     </div>
-                    <button type="submit" class="btn btn-dark mt-2 mx-5">Calculate</button>
+                    <button id="btnSubmit" type="submit" class="btn btn-dark mt-2 mx-5">Calculate</button>
                 </form>
              </div>
+            </div>
+            <!--You ARE HERE-->
+            <div class="row">
+                <div class="col mx-5">
+                    <h1 class="m-5">Your Monthly Payment will be... </h1>
+                    <h1></h1>
+                    <h2>Total Principal: </h2>
+                    <h2>Total Interest: </h2>
+                    <h2>Total Cost: </h2>
+                </div>
+                <div class="col m-5">
+                    <img src="/img/Solution.png" alt="">
+                </div>
             </div>
     </div>
 </main>
@@ -101,5 +119,8 @@
   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
 </script>
 <script src="/js/site.js"></script>
+<script>
+    document.getElementById("btnSubmit").addEventListener("click", totalMonthlyPayment);
+</script>
 </body>
 </html>
